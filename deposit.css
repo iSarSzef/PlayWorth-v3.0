@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+:root{
+    --red:#690000;
+    --slightly_darker_red: #500000;
+    --dark_red:#3f0713;
+    --another_red: #c00000;
+    --light_red: #ff2323;
+    --main_font: "Crimson Text", serif;
+    --second_font: "Tagesschrift", system-ui;
+    --test:#00f;
+}
+
+body{
+    background-color: var(--red);
+    margin: 0px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+header{
+    background-color: var(--red);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 99;
+    font-family: var(--main_font);
+}
+
+#arrow_in_header{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fold_nav{
+    position: relative;
+    height: 50px;
+    width: 62.5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#fold_arrow{
+    transform: rotate(90deg);
+    height: 70px;
+}
+
+#icon_in_header{
+    height: 100%;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header_logo > img{
+    position: relative;
+    left: -10px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+#links{
+    position: relative;
+    font-size: 26px;
+    width: calc(100% - 400px);
+}
+
+#links > a:hover{
+    animation-name: glow0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes glow0{
+    0% {
+        text-shadow: 0px 0px 0px rgb(255, 255, 255);
+        font-size: 26px;
+        text-decoration: underline;
+    }
+    100% {
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        font-size: 28px;
+        text-decoration: underline;
+    }
+}
+
+#log_in{
+    position: relative;
+    height: 100px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+}
+
+#log_in_button{
+    height: 50px;
+    width: 135px;
+    background-color: black;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(60vh);
+    background-color: var(--red);
+}
+
+#login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: calc(80%);
+    border-radius: 20px;
+    background-color: var(--dark_red);
+}
+
+footer{
+    position: relative;
+    top: 77px;
+    background-color: var(--slightly_darker_red);
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#footer_logo{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-family: var(--second_font);
+    margin-bottom: 0px;}
+
+#footer_logo > img{
+    height: 60px;
+    border-radius: 50px;
+}
+
+#one{
+    color: rgb(255, 255, 0);
+}
+
+#two{
+    color: red;
+}
+footer > section{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+footer > section > p{
+    font-size: 16px;
+    color: var(--another_red);
+    margin-top: 0px;
+}
+
+footer > section > p > a{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--light_red);
+    margin-top: 0px;
+}
+
+hr{
+    width: 94%;
+    border: 1px solid var(--light_red);
+}
+
+footer > p{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--another_red);
+    margin-top: 0px;
+    margin-left: 30px;
+}
+#deposit{
+    width: 45%;
+    height: 350px;
+    background-color: var(--slightly_darker_red);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#button1, #button2, #button3, #button4, #button5, #button6{
+    border-radius: 5px;
+    background-color: var(--another_red);
+}
+div>input{
+    border-radius: 5px;
+    background-color: var(--dark_red);
+    height: 25px;
+    padding-left: 10px;
+}
+h1>img{
+    position: absolute;
+    left: calc(50% + 30px);
+    height: 30px;
+}
+.contains_label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px 2.5px;
+}
+#contain_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+label{
+    font-size: 14px;
+}
+#submit{
+    margin-top: 10px;
+    width: 60%;
+    height: 30px;
+    border-radius: 20px;
+    background-color: var(--light_red);
+    color: rgb(251, 255, 0);
+    font-weight: bolder;
+}
+button{
+    width: 75px;
+}
+@media screen and (min-width: 1200px) and (max-width: 1600px){
+    main{
+        position: relative;
+        top: 0px;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    main{
+        position: relative;
+        top: 0px;
+    }
+    #deposit{
+        width: 75%;
+    }
+    #contain_div{
+        flex-direction: column;
+    }
+    #buttons{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    #balance_box{
+        padding-left: 5px;
+        padding-right: 0px;
+        margin-left: 6px;
+    }
+    #log_in{
+        justify-content: end;
+        width: 250px;
+    }
+    #user_info{
+        margin-left: 10px;
+    }
+    #user_info > span {
+        font-size: 12px;
+        text-align: center;
+    }
+    #user_info > a{
+        margin-left: 12px;
+        height: 80%;
+        font-size: 18px;
+        padding: 0px;
+    }
+    #user_info > a > div{
+        width: 75px;
+        height: 45px;
+        font-size: 18px;
+        padding: 0px;
+    }
+    #links{
+        font-size: 0px;
+    }
+    footer{
+        width: 90%;
+    }
+    footer > p{
+        margin-left: 15px;
+    }
+}

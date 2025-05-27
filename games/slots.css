@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+:root{
+    --red:#690000;
+    --slightly_darker_red: #500000;
+    --dark_red:#3f0713;
+    --another_red: #c00000;
+    --light_red: #ff2323;
+    --main_font: "Crimson Text", serif;
+    --second_font: "Tagesschrift", system-ui;
+    --test:#00f;
+}
+
+#game{
+    position: relative;
+    height: 550px;
+    width: 65%;
+    background-color: var(--dark_red);
+    font-size: 28px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#input{
+    height: 35px;
+    font-size: 22px;
+    width: 200px;
+    border-radius: 10px;
+    border: 0px;
+    padding-left: 35px;
+    background-color: var(--red);
+    color: rgb(255, 255, 255);
+    background-image: url(../others/token.png);
+    background-repeat: no-repeat;
+    background-position: 1px;
+    background-size: 35px;
+    counter-increment: none;
+    z-index: 2;
+}
+
+#submit{
+    height: 37px;
+    width: 65px;
+    font-family: var(--second_font);
+    font-size: 22px;
+    border-radius: 10px;
+    border: 0px;
+    background-color: var(--red);
+    margin-left: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    z-index: 2;
+}
+
+input{
+    position: relative;
+    top: 10px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#slots_container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#game_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-image: url(../others/slot_machine\(machine\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: 0;
+}
+
+#slot1{
+    background-image: url(../others/slot/Seven.jpg);
+}
+
+#slot2{
+    background-image: url(../others/slot/Seven.jpg);
+}
+
+#slot3{
+    background-image: url(../others/slot/Seven.jpg);
+}
+
+.slot{
+    width: 115px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    top: 225px;
+}
+
+.slots_spacing{
+    width: 16px;
+    height: 40%;
+}
+
+#cover{
+    background-image: url(../others/slot_machine\(cover\).png);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 0px;
+}
+
+@media screen and (min-width:1000px) and (max-width: 1800px){
+    nav{
+        width: 87.5px;
+    }
+    nav p, #fold_games a{
+        display: none;
+    }
+    #filler{
+        width: 87.5px;
+    }
+    main{
+        position: relative;
+        width: calc(100% - 87.5px);
+        top: 150px;
+    }
+    .game_container{
+        width: calc((100%/2) - 25px);
+    }
+    #title > p{
+        width: 100%;
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    #arrow_in_header{
+        display: none;
+    }
+    #header_logo>img{
+        left: 0px;
+        margin: 0px 5px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    nav{
+        width: 87.5px !important;
+    }
+    nav p, #fold_games a{
+        display: none !important;
+    }
+    #fold_games > img{
+        height: 35px !important;
+    }
+    #filler{
+        width: 87.5px !important;
+    }
+    #filler2{
+        height: 100px;
+    }
+    main{
+        position: relative !important;
+        width: calc(100% - 87.5px) !important;
+        top: 50px !important;
+        padding-right: 12px;
+    }
+    #game{
+        width: 90% !important;
+        height: 310px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0px !important;
+    }
+    #place_bet_container{
+        margin-bottom: 20px;
+    }
+    #title > p{
+        width: 100%;
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    #arrow_in_header{
+        display: none  !important;
+    }
+    #header_logo>img{
+        left: 0px  !important;
+        margin: 0px 5px  !important;
+    }
+    @keyframes glow3{
+        0% {
+            text-shadow: 0px 0px 0px rgb(255, 255, 255);
+            font-size: 28px;
+        }
+        100% {
+            text-shadow: 0px 0px 30px rgb(255, 255, 255);
+            font-size: 32px;
+        }
+    }
+    @keyframes size_up3{
+        0% {
+            height: 100px;
+            top: 0px;
+        }
+        100% {
+            height: 115px;
+            top: 0px;
+        }
+    }
+    #balance_box{
+        padding-left: 5px  !important;
+        padding-right: 0px  !important;
+        margin-left: 6px  !important;
+    }
+    #log_in{
+        justify-content: end  !important;
+    }
+    #user_info{
+        margin-left: 0px  !important;
+    }
+    #user_info > span{
+        display: none  !important;
+    }
+    #user_info > a{
+        margin-left: 12px  !important;
+        height: 80%  !important;
+        font-size: 18px  !important;
+        padding: 0px  !important;
+    }
+    #user_info > a > div{
+        width: 75px  !important;
+        height: 45px  !important;
+        font-size: 18px  !important;
+        padding: 0px  !important;
+    }
+    #links{
+        font-size: 0px  !important;
+    }
+    footer{
+        width: 90%  !important;
+        top: 50px  !important;
+    }
+    footer > p{
+        margin-left: 15px  !important;
+    }
+    .slot{
+        width: 60px;
+        top: 150px;
+    }
+    #input{
+        height: 25px;
+        width: 125px;
+    }
+    #submit{
+        height: 28px;
+        font-size: 20px;
+    }
+    input{
+        top: 15px;
+    }
+}

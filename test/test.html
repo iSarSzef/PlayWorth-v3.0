@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../test/test.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.png">
+    <title>Test page</title>
+</head>
+<body>
+    <header>
+        <div id="icon_in_header">
+            <a href="../index.php" id="header_logo">
+                    <img src="../favicon.png" alt="logo">
+            </a>
+        </div>
+
+        <div id="links">
+            <a href="../index.php">Home</a>
+        </div>
+        
+    </header>
+
+    <main>
+        <h1>Average profit (10 games)</h1>
+        <canvas id="canvas"></canvas>
+        <h1>Games gallery</h1>
+        <div id="slider">
+            <div id="pic1" onclick="switchtoleft()"></div>
+            <div id="pic2" onclick="gotosite()"></div>
+            <div id="pic3" onclick="switchtoright()"></div>
+        </div>
+    </main>
+
+    <script src="../test/test.js"></script>
+</body>
+</html>

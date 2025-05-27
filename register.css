@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap');
+
+:root{
+    --red:#690000;
+    --slightly_darker_red: #500000;
+    --dark_red:#3f0713;
+    --another_red: #c00000;
+    --light_red: #ff2323;
+    --main_font: "Crimson Text", serif;
+    --second_font: "Tagesschrift", system-ui;
+    --test:#00f;
+}
+
+body{
+    background-color: var(--red);
+    margin: 0px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+*{
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+header{
+    background-color: var(--red);
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 99;
+    font-family: var(--main_font);
+}
+
+#arrow_in_header{
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#fold_nav{
+    position: relative;
+    height: 50px;
+    width: 62.5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#fold_arrow{
+    transform: rotate(90deg);
+    height: 70px;
+}
+
+#icon_in_header{
+    height: 100%;
+    width: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header_logo > img{
+    position: relative;
+    left: -10px;
+    height: 75px;
+    border-radius: 50px;
+}
+
+#links{
+    position: relative;
+    font-size: 26px;
+    width: calc(100% - 400px);
+}
+
+#links > a:hover{
+    animation-name: glow0;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes glow0{
+    0% {
+        text-shadow: 0px 0px 0px rgb(255, 255, 255);
+        font-size: 26px;
+        text-decoration: underline;
+    }
+    100% {
+        text-shadow: 0px 0px 10px rgb(255, 255, 255);
+        font-size: 28px;
+        text-decoration: underline;
+    }
+}
+
+#log_in{
+    position: relative;
+    height: 100px;
+    width: 175px;
+    display: flex;
+    align-items: center;
+}
+
+#log_in_button{
+    height: 50px;
+    width: 135px;
+    background-color: black;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: var(--red);
+}
+
+#register{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: calc(80%);
+    border-radius: 20px;
+    background-color: var(--dark_red);
+}
+
+footer{
+    position: relative;
+    top: 77px;
+    background-color: var(--slightly_darker_red);
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#footer_logo{
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-family: var(--second_font);
+    margin-bottom: 0px;}
+
+#footer_logo > img{
+    height: 60px;
+    border-radius: 50px;
+}
+
+#one{
+    color: rgb(255, 255, 0);
+}
+
+#two{
+    color: red;
+}
+footer > section{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+footer > section > p{
+    font-size: 16px;
+    color: var(--another_red);
+    margin-top: 0px;
+}
+
+footer > section > p > a{
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--light_red);
+    margin-top: 0px;
+}
+
+hr{
+    width: 94%;
+    border: 1px solid var(--light_red);
+}
+
+footer > p{
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--another_red);
+    margin-top: 0px;
+    margin-left: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+form > input{
+    width: 80%;
+    height: 50px;
+    border-radius: 12px;
+    margin: 10px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-family: var(--main_font);
+    color: black;
+}
+
+form > button{
+    width: 15%;
+    height: 50px;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 24px;
+    font-family: var(--main_font);
+    font-weight: bold;
+    color: black;
+    background-color: var(--another_red);
+    cursor: pointer;
+}
+#txt{
+    margin: 0px;
+    color: red;
+}
+#txt > a{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #ff6767;
+}
+#checkbox{
+    width: 15px;
+    height: 15px;
+}
+
+#show_pass{
+    position: absolute;
+    top: 425px;
+    right: 30%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+#show_pass2{
+    position: absolute;
+    top: 500px;
+    right: 30%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1000px){
+    #register{
+        width: 90%;
+        height: 600px;
+    }
+    form > button{
+        width: auto;
+    }
+    main{
+        justify-content: start;
+        padding-top: 100px;
+        height: 500px;
+    }
+    footer{
+        width: 95%;
+    }
+    #show_pass{
+        top: 373px;
+        right: 14%;
+    }
+    #show_pass2{
+        top: 448px;
+        right: 14%;
+    }
+}
